@@ -22,3 +22,9 @@ jobs:
             - name: Run Linter
               run: flake8 app.py
 
+            - name: Install Pip Audit
+              run: pip install pip-audit
+
+            - name: Audit Dependencies
+              run: pip audit -r requirements.txt 
+
