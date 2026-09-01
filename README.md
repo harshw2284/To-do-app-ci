@@ -19,6 +19,12 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 * **Frontend:** HTML5, Modern CSS
 * **Containerization:** Docker 
 
+| Layer      | Technology                           |
+|------------|--------------------------------------|
+| Frontend   | HTML5, Modern CSS                    |
+| Backend    | Python, Flask                        |
+| Containers | Docker                               |
+
 ## Directory Structure
 
 ```text
