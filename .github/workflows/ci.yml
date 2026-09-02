@@ -5,7 +5,7 @@ on:
 
 jobs:
     lint:
-        name: Lint 
+        name: Lint Test
         runs-on: ubuntu-latest
         steps:
             - name: Code checkout
@@ -21,15 +21,47 @@ jobs:
 
             - name: Run Linter
               run: flake8 app.py
+              
+    pip:
+        name: Dependency Test 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code checkout
+              uses: actions/checkout@v7
+
+            - name: Setup Python 
+              uses: actions/setup-python@v7
+              with:
+                python-version: 3.12
 
             - name: Install Pip Audit
               run: pip install pip-audit
 
             - name: Audit Dependencies
               run: pip-audit -r requirements.txt 
+    sast:
+        name: SAST
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code checkout
+              uses: actions/checkout@v7
+
+            - name: Setup Python 
+              uses: actions/setup-python@v7
+              with:
+                python-version: 3.12
 
             - name: Run SAST 
               run: bandit -r app.py
+
+    git-leaks:
+        name: Secret Scan (GitLeaks) 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code checkout
+              uses: actions/checkout@v7
+              with:
+                fetch-depth: 0
 
             - name: Git leaks 
               uses: gitleaks/gitleaks-action@v2
