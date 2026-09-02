@@ -33,6 +33,25 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 └── templates/
     └── index.html      # Frontend HTML layout
 ```
+## Run in Docker Container
+
+1. Build the Image
+
+```bash
+docker build -t to-do-app .
+```
+
+2. Run the Container
+
+```bash
+docker run -d -p 5000:5000 to-do-app
+```
+
+3. Check the Status
+
+```bash
+https://localhost:5000
+```
 
 ## Security Pipeline 
 
