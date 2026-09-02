@@ -28,3 +28,6 @@ jobs:
             - name: Audit Dependencies
               run: pip-audit -r requirements.txt 
 
+            - name: Run SAST 
+              run: bandit -r app.py
+
