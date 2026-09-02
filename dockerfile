@@ -1,4 +1,3 @@
-# --- Stage 1: Build Dependencies ---
 FROM python:3.12-slim 
 
 WORKDIR /app
