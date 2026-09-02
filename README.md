@@ -4,7 +4,6 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-green)
-![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 
 ## Features
 
