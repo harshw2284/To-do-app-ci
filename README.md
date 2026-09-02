@@ -1,4 +1,4 @@
-# Task Manager API & Web Application
+# Task Manager API & Web Application  [![Continuous Integration (CI)](https://github.com/harshw2284/my-app-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/harshw2284/my-app-ci/actions/workflows/ci.yml)
 
 A lightweight, containerized Python Flask To-Do application built for continuous integration (CI/CD) testing, Docker deployments, and quick hosting.
 
