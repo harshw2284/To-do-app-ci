@@ -33,6 +33,21 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 └── templates/
     └── index.html      # Frontend HTML layout
 ```
+
+## Run the App locally
+
+1. Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run
+
+```bash
+python app.py
+```
+
 ## Run in Docker Container
 
 1. Build the Image
