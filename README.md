@@ -41,13 +41,13 @@ The CI pipeline enforces **5 sequential security gates** before any code reaches
 | Gate | Name | Tool | Purpose |
 | :---: | :--- | :--- | :--- |
 | 1 | Secret Scan | Gitleaks | Scans entire Git history for leaked secrets |
-| 2 | Lint | Checkstyle | Enforces Python coding standards |
+| 2 | Lint | Flake8 | Enforces Python coding standards |
 | 3 | SAST | Bandit | scans Python code for security issues |
 | 4 | Dependency Test | pip-audit | scan Python environments and dependency files for known security vulnerabilities |
 | 5 | Unit Test | Pytest | Verify the application actually works |
 
 **CI**:
 
-<img width="670" height="581" alt="image" src="https://github.com/user-attachments/assets/52c54b77-054c-4f94-83f9-61b98a486e33" />
+<img width="1370" height="565" alt="image" src="https://github.com/user-attachments/assets/59b4b12c-5c7b-4d95-a53f-91651e4c5f5e" />
 
-
+---
