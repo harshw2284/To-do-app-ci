@@ -4,6 +4,10 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-green)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-orange.svg)
+
+<img width="1024" height="817" alt="image" src="https://github.com/user-attachments/assets/8b9993f5-53b1-411c-8f93-5dcb9d04e286" />
+
 
 ## Features
 
@@ -26,7 +30,26 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 ```text
 ├── app.py              # Flask server and routing logic
 ├── requirements.txt    # Application dependencies
-├── Dockerfile          # Multi-stage production Dockerfile
+├── dockerfile          # Multi-stage production Dockerfile
 ├── .dockerignore       # Docker build exclusion rules
 └── templates/
     └── index.html      # Frontend HTML layout
+```
+
+## Security Pipeline 
+
+The CI pipeline enforces **5 sequential security gates** before any code reaches production:
+
+| Gate | Name | Tool | Purpose |
+| :---: | :--- | :--- | :--- |
+| 1 | Secret Scan | Gitleaks | Scans entire Git history for leaked secrets |
+| 2 | Lint | Checkstyle | Enforces Python coding standards |
+| 3 | SAST | Bandit | scans Python code for security issues |
+| 4 | Dependency Test | pip-audit | scan Python environments and dependency files for known security vulnerabilities |
+| 5 | Unit Test | Pytest | Verify the application actually works |
+
+**CI**:
+
+<img width="670" height="581" alt="image" src="https://github.com/user-attachments/assets/52c54b77-054c-4f94-83f9-61b98a486e33" />
+
+
