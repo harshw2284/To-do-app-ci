@@ -42,8 +42,7 @@ def toggle_todo(todo_id):
 
 @app.route('/delete/<int:todo_id>')
 def delete_todo(todo_id):
-    global todos
-    todos = [todo for todo in todos if todo['id'] != todo_id]
+    todos[:] = [todo for todo in todos if todo['id'] != todo_id]
     return redirect(url_for('index'))
 
 

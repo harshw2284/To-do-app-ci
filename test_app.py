@@ -1,5 +1,6 @@
 import pytest
-from app import app, todos
+import app as app_module
+from app import app
 
 
 @pytest.fixture
@@ -33,4 +34,4 @@ def test_toggle_todo_route(client):
 def test_delete_todo_route(client):
     response = client.get('/delete/1', follow_redirects=True)
     assert response.status_code == 200
-    assert not any(t['id'] == 1 for t in todos)
+    assert not any(t['id'] == 1 for t in app_module.todos)
