@@ -6,8 +6,7 @@ A lightweight, containerized Python Flask To-Do application built for continuous
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-green)
 ![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-orange.svg)
 
-<img width="1024" height="817" alt="image" src="https://github.com/user-attachments/assets/8b9993f5-53b1-411c-8f93-5dcb9d04e286" />
-
+<img width="1914" height="850" alt="image" src="https://github.com/user-attachments/assets/948f29f0-72c2-4c76-a59b-061d24643bf5" />
 
 ## Features
 
