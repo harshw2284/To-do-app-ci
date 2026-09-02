@@ -21,7 +21,7 @@ jobs:
 
             - name: Run Linter
               run: flake8 app.py
-              
+
     pip:
         name: Dependency Test 
         runs-on: ubuntu-latest
@@ -50,6 +50,9 @@ jobs:
               uses: actions/setup-python@v7
               with:
                 python-version: 3.12
+                
+            - name: Install Dependencies
+              run: pip install -r requirements.txt
 
             - name: Run SAST 
               run: bandit -r app.py
